@@ -1,34 +1,35 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>GUNT RolePlay</title>
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript">
-  function digitalWatch() {
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
-    if (hours < 10) hours = "0" + hours;
-    if (minutes < 10) minutes = "0" + minutes;
-    if (seconds < 10) seconds = "0" + seconds;
-    document.getElementById("digital_watch").innerHTML = hours + ":" + minutes + ":" + seconds;
-    setTimeout("digitalWatch()", 1000);
-  }
-</script>
+	<meta charset="utf-8">
+	<title>sleekLoad 2</title>
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/sleek.css">
 </head>
-<body onload="digitalWatch()">
-<h1>GUNT.IM</h1>
-    <div class="head">
-	    <ul>
-		    <li><a href="#" >Главная</a></li>
-			<li><a href="#">Форум</a></li>
-			<li><a href="#">Пользователи</a></li>
-			<li><p id="digital_watch" font-size: 120%; font-weight: bold;"></p></li>
-		</ul>
+<body>
+	<div id="player"></div>
+	<div id="overlay"></div>
+
+	<div id="title"></div>
+	<div id="subtitle">
+		Сейчас вы играете <span id="gamemode">hl2rp</span> карта <span id="map">rp_city2_v4_finalb</span>
 	</div>
-	<div class="menu">	 
-<iframe src="https://discordapp.com/widget?id=405750535648706560&theme=dark" width="350" height="500" margin-left="700" allowtransparency="true" frameborder="0"></iframe>
-    </div>	
+
+	<div id="status-container">
+		<div id="status">Retrieving server info...</div>
+		<div id="loading">
+			<div id="loading-progress"></div>
+		</div>
+		<div id="messages"></div>
+	</div>
+
+	<div id="music">
+		Вы слушаете<div id="music-name"></div>
+	</div>
+
+	<script src="js/lib/jquery-2.1.1.min.js"></script>
+	<script src="js/lib/jquery.backstretch.min.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/sleek.js"></script>
 </body>
 </html>
